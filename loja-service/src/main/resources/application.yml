@@ -1,0 +1,19 @@
+micronaut:
+  application:
+    name: lojaService
+  server:
+    port: 8001
+
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+kafka:
+  bootstrap:
+    servers: 172.22.0.6:9092
+consul:
+  client:
+    registration:
+      enable: true
+    defaultZone: "localhost:8500"

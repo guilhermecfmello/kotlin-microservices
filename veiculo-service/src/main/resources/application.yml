@@ -1,0 +1,34 @@
+micronaut:
+  application:
+    name: veiculoService
+  server:
+    port: -1
+datasources:
+  default:
+    url: jdbc:postgresql://127.0.0.1:5432/dbveiculo
+    driverClassName: org.postgresql.Driver
+    db-type: postgresql
+    schema-generate: CREATE_DROP
+    dialect: POSTGRES
+    username: postgres
+    password: '123456'
+netty:
+  default:
+    allocator:
+      max-order: 3
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        showsql: true
+        format_sql: true
+logger:
+  levels:
+    root: INFO
+consul:
+  client:
+    registration:
+      enable: true
+    defaultZone: "localhost:8500"
